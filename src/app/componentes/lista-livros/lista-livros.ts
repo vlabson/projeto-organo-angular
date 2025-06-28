@@ -7,8 +7,10 @@ import { livros } from '../../mock-livros';
 @Component({
   selector: 'app-lista-livros',
   templateUrl: './lista-livros.html',
-  styleUrl: './lista-livros.css'
+  styleUrl: './lista-livros.css',
+  imports: [GeneroLivros]
 })
+
 export class ListaLivros implements OnInit {
   generos: GeneroLiterario[] = [];
   livrosPorGenero: Map<string, LivroType[]> = new Map();

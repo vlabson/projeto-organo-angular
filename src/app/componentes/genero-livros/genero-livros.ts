@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Livro } from "../livro/livro";
 import { livros } from '../../mock-livros';
+import { GeneroLiterario } from '../livro/livro-type';
 
 @Component({
   selector: 'app-genero-livros',
@@ -9,5 +10,6 @@ import { livros } from '../../mock-livros';
   imports: [Livro]
 })
 export class GeneroLivros {
-  livro = livros[0]
+  
+  genero = input.required<GeneroLiterario>();
 }
